@@ -72,7 +72,6 @@ class LocalTemporalFusion(nn.Module):
             end_idx = start_idx + x.size(3) // 4
             split_tensors.append(x[:, :, :, start_idx:end_idx])
 
-        # 对每一份应用不同大小的卷积核进行卷积操作
         outputs = []
         for i, split_tensor in enumerate(split_tensors):
             if i == 0:
