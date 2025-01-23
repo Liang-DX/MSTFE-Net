@@ -1,0 +1,32 @@
+network: MyModel
+network_args: 
+  classes: 2
+  channels: 3
+  dim: 32
+  pool_size: 50
+  pool_stride: 15
+  heads: 8
+  fc: 4
+  depth: 3
+  attn_dropout: 0.5
+  fc_dropout: 0.5
+  cnn_dropout : 0.25
+
+
+data_path: dataset/bci_iv_2b
+out_log: log/bci_iv_2b
+
+
+device: gpu
+nGPU: 0
+random_seed: 0
+
+batch_size: 250
+
+epoch: 2000
+
+lr: 0.0002
+
+# Data augmentation
+classes: 2
+num_segs: 8
