@@ -219,7 +219,7 @@ class FeedForward(nn.Module):
     def __init__(self, d_model, d_hidden, dropout):
         super().__init__()
         self.w_1 = nn.Linear(d_model, d_hidden)
-        self.act = nn.GELU()
+        self.act = nn.ReLU()
         self.w_2 = nn.Linear(d_hidden, d_model)
         self.dropout = nn.Dropout(dropout)
 
