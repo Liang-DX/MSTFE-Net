@@ -21,7 +21,7 @@ device: gpu
 nGPU: 0
 random_seed: 0
 
-batch_size: 16
+batch_size: 20
 
 epoch: 2000
 
