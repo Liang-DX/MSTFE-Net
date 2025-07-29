@@ -107,7 +107,7 @@ class Trainer():
                     train_pred.extend(torch.max(train_output, 1)[1].cpu().tolist())
                     train_true.extend(train_label.cpu().tolist())
             train_loss /= len(train_dataloader)
-            self.scheduler.step(train_loss)
+            
             # test
             self.net.eval()
             test_loss = 0
