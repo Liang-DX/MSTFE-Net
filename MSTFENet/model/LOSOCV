@@ -9,7 +9,7 @@ from sklearn.metrics import cohen_kappa_score, f1_score, accuracy_score
 from data.data_util import *
 from utils import *
 torch.set_num_threads(10)
-# 设备配置
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 import numpy as np
@@ -34,7 +34,7 @@ class SubjectDataset(Dataset):
         for sid in subject_ids:
             train_datafile =   str(sid) + 'T'
             test_datafile =  str(sid) + 'E'
-            # 加载E条件数据
+           
             train_data, train_labels = load_data(base_path, train_datafile)
             test_data, test_labels = load_data(base_path, test_datafile)
 
